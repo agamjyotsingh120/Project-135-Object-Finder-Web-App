@@ -1,5 +1,6 @@
 status1 = "";
 input_text = "";
+objects = [];
 function setup(){
     canvas = createCanvas(300,290);
     canvas.position(480,250)
@@ -20,7 +21,7 @@ function modelLoaded(){
 }
 function draw(){
     image(video,0,0,300,290);
-    if(Status != ""){
+    if(status1 != ""){
         object_Detector.detect(video, gotResults);
         for(i = 0;i < objects.length;i++){
             document.getElementById("status").innerHTML = "Status : Object Detected";
